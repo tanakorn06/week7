@@ -1,0 +1,72 @@
+<div class="cart-container d-flex justify-content-center align-items-center">
+    <div class=" rounded w-75 h-75">
+        <h1 class="text-center mb-5">Cart</h1>
+        <div class="row border w-100 mb-3">
+            <div class="col-3">
+                <img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+            </div>
+            <div class="col-5 d-flex align-items-center">
+                <div>
+                    <p class="h3">Cake 1 </p>
+                    <p class="ml-5 h5">Price: <span class="text-success">{{pd1Price}}</span> Bath</p>
+                </div>
+            </div>
+            <div class="col-2 justify-content-center d-flex align-items-center">
+                <div>
+                    <p class="h4 ">
+                        <button (click)="addPd1()" class="btn btn-info">+</button>
+                        <span class="mx-2">{{pd1Count}}</span>
+                        <button (click)="removePd1()" class="btn btn-warning">-</button>
+                    </p>
+                </div>
+            </div>
+            <div class="col-1 justify-content-center d-flex align-items-center">
+                <button (click)="delPd1()" class="btn btn-danger">Delete</button>
+            </div>
+            <div class="col-1 justify-content-center d-flex align-items-center">
+                <p class="h5">{{pd1Sum}}</p>
+            </div>
+        </div>
+        <div class="row border w-100 mb-3">
+            <div class="col-3">
+                <img src="https://images.pexels.com/photos/1639567/pexels-photo-1639567.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+            </div>
+            <div class="col-5 d-flex align-items-center">
+                <div>
+                    <p class="h3">Cake 2 </p>
+                    <p class="ml-5 h5">Price: <span class="text-success">{{pd2Price}}</span> Bath</p>
+                </div>
+            </div>
+            <div class="col-2 justify-content-center d-flex align-items-center">
+                <div>
+                    <p class="h4 ">
+                        <button (click)="addPd2()" class="btn btn-info">+</button>
+                        <span class="mx-2">{{pd2Count}}</span>
+                        <button (click)="removePd2()" class="btn btn-warning">-</button>
+                    </p>
+                </div>
+            </div>
+            <div class="col-1 justify-content-center d-flex align-items-center">
+                <button (click)="delPd2()" class="btn btn-danger">Delete</button>
+            </div>
+            <div class="col-1 justify-content-center d-flex align-items-center">
+                <p class="h5">{{pd2Sum}}</p>
+            </div>
+        </div>
+
+        <div class="row w-100 p-3 mb-3">
+            <div class="col-11 text-end">
+                <p class="h5">Total : </p>
+            </div>
+            <div class="col-1 justify-content-center d-flex align-items-center">
+                <p class="h5">{{total}}</p>
+            </div>
+        </div>
+        <div class="row w-100 mb-3">
+            <div class="col-11"></div>
+            <div class="col-1 justify-content-center d-flex align-items-center">
+                <button (click)="buy()" class="btn btn-success">Buy</button>
+            </div>
+        </div>
+    </div>
+</div>

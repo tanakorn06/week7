@@ -1,0 +1,55 @@
+<div class="contact-container  d-flex justify-content-center">
+    <div class="row border border-3 rounded">
+        <div class="col-4">
+            <img src="https://images.pexels.com/photos/1684151/pexels-photo-1684151.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+        </div>
+        <div class="col-8 text-center d-flex justify-content-center">
+            <div class="p-5">
+                <h1 class=" mb-5">Contact</h1>
+                <div class="h4 py-2">
+                    <div class="py-2">
+                        <p class="text-danger">Email : <span>NVC_Shop@gmail.com</span></p>
+                    </div>
+                    <div class="py-2">
+                        <p class="text-primary">Tel. : <span>081-001-1100</span></p>
+                    </div>
+                    <div class="py-2">
+                        <p class="text-success">Line : <span>NVC_Shop001</span></p>
+                    </div>
+                </div>
+
+                <div class="text-start">
+
+                    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+                        <div class="mb-3">
+                            <label for="exampleInputName" class="form-label">Name</label>
+                            <input [(ngModel)]="contact.name" type="text" class="form-control" name="exampleInputName" >
+                          </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email</label>
+                          <input [(ngModel)]="contact.email" type="email" class="form-control" name="exampleInputEmail1" aria-describedby="emailHelp">
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPhone" class="form-label">Phone</label>
+                            <input [(ngModel)]="contact.phone" type="text" class="form-control" name="exampleInputphone" >
+                          </div>
+                        <div class="mb-3">
+                          <label for="exampleInputMassage" class="form-label">Massage</label>
+                          <textarea class="form-control" name="exampleInputMassage" id="exampleInputMassage" cols="30" rows="10" [(ngModel)]="contact.msg"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" (click)="readData()">Submit</button>
+                      </form>
+                      <div>
+                          {{ contact | json }}
+                      </div>
+                      <div>
+                          {{ strResult}}
+                      </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
